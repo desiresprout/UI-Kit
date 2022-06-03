@@ -1,0 +1,11 @@
+{
+  "printWidth": 100,
+  "singleQuote": true,
+  "semi": true,
+  "jsxBracketSameLine": true,
+  "eslintIntegration": true,
+  "parser": "typescript",
+  "useTabs": false,
+  "endOfLine": "auto",
+  "tabWidth": 2
+}
