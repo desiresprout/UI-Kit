@@ -35,9 +35,11 @@ export const Error = Template.bind({});
 Primary.args = {
   label: 'Primary',
   variant: 'primary',
+  onClick: () => alert('클릭되었습니다'),
 };
 
 Error.args = {
-  label: 'Error',
+  label: 'Danger',
   variant: 'danger',
+  onClick: () => alert('클릭되었습니다'),
 };

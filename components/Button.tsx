@@ -61,22 +61,14 @@ const StyledButton = styled('button', {
         padding: '6px 15px',
       },
     },
-    disabled: {
-      true: {},
-    },
   },
-  compoundVariants: [
-    {
-      disabled: true,
-      css: {
-        border: '1px solid $disabledBorderColor',
-        backgroundColor: '$disabledBackgroundColor',
-        color: '$disabledFontColor',
-        pointerEvents: 'none',
-        userSelect: 'none',
-      },
-    },
-  ],
+  '&:disabled': {
+    border: '1px solid $disabledBorderColor',
+    backgroundColor: '$disabledBackgroundColor',
+    color: '$disabledFontColor',
+    cursor: 'not-allowed',
+    userSelect: 'none',
+  },
 });
 
 export default Button;
