@@ -24,11 +24,7 @@ const Template: ComponentStory<typeof CheckBox> = ({ disabled, label, defaultChe
     setChecked(checkedValue);
   };
 
-  return (
-    <>
-      <CheckBox checked={checked} disabled={disabled} onChange={onChange} label={label} />
-    </>
-  );
+  return <CheckBox checked={checked} disabled={disabled} onChange={onChange} label={label} />;
 };
 
 export const defaultCheckBox = Template.bind({});
