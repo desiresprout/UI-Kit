@@ -36,9 +36,10 @@ const CheckBoxContainer = styled('label', {
   paddingLeft: '15px',
   fontSize: '14px',
 
-  'input[type=checkbox]': {
+  input: {
     height: 0,
     zIndex: 1,
+    opacity: 0,
     '&:checked + span': {
       background: '$primary',
     },
