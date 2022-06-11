@@ -1,4 +1,4 @@
-import { createStitches, createTheme, PropertyValue } from '@stitches/react';
+import { createStitches, createTheme, PropertyValue, VariantProps } from '@stitches/react';
 
 const stitches = createStitches({
   theme: {
@@ -8,6 +8,7 @@ const stitches = createStitches({
       lightColor: '#202A25',
       darkColor: '#26F0F1',
       fontColor: 'white',
+      borderColor: '#E8E8E8',
       disabledBackgroundColor: '#F5F5F5',
       disabledBorderColor: '#D9D9D9',
       disabledFontColor: '#00000040',
@@ -44,5 +45,5 @@ const injectGlobalStyles = stitches.globalCss({
 
 injectGlobalStyles();
 
-const { styled, keyframes, ...rest } = stitches;
-export { styled, keyframes, PropertyValue, rest };
+const { styled, keyframes, css, ...rest } = stitches;
+export { styled, keyframes, css, PropertyValue, VariantProps, rest };
