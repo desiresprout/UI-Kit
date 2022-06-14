@@ -1,10 +1,12 @@
 module.exports = {
+  parser: '@typescript-eslint/parser',
   extends: [
     'plugin:storybook/recommended',
     'plugin:react-hooks/recommended',
     'plugin:prettier/recommended',
+    'plugin:jsx-a11y/recommended',
   ],
-  plugins: ['unused-imports'],
+  plugins: ['unused-imports', 'react-hooks', 'jsx-a11y'],
   rules: {
     'no-else-return': 2,
     'react/prop-types': 0,
@@ -13,6 +15,7 @@ module.exports = {
     'unused-imports/no-unused-vars-ts': 0,
     'react-hooks/exhaustive-deps': 2,
     'react/display-name': 0,
-    'no-use-before-define': 'error',
+    'no-unused-vars': 0,
+    'no-console': 1,
   },
 };
