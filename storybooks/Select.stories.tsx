@@ -1,35 +1,30 @@
 import React from 'react';
-import { ComponentStory, ComponentMeta } from '@storybook/react';
 import Select from '@components/Select';
 
 const options = [
-  {
-    label: '에이',
-    value: 'a',
-  },
-  {
-    label: '비',
-    value: 'b',
-  },
+  { value: 'chocolate', label: 'Chocolate' },
+  { value: 'strawberry', label: 'Strawberry' },
+  { value: 'vanilla', label: 'Vanilla' },
 ];
 
 export default {
   title: 'components/Select',
-  argTypes: {
-    options: {
-      options: ['비', '에이'],
-      description: 'button variant',
-      control: { type: 'select' },
-    },
+  parameters: {
+    controls: { hideNoControlsWarning: true },
   },
   component: Select,
-} as ComponentMeta<typeof Select>;
+};
 
-const Template: ComponentStory<typeof Select> = (args) => <Select {...args} />;
+export const Template = () => {
+  const onChange = (label: string, value: string) => {
+    console.log(label);
+    console.log(value);
+  };
 
-export const Primary = Template.bind({});
-// export const Error = Template.bind({});
-
-Primary.args = {
-  options,
+  return (
+    <div style={{ display: 'flex', flexDirection: 'column', gap: '30px' }}>
+      <Select options={options} />
+      <Select defaultValue={options[0]} options={options} onChange={onChange} />
+    </div>
+  );
 };
