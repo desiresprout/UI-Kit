@@ -7,10 +7,10 @@ module.exports = {
   webpackFinal: async (config) => {
     config.resolve.plugins = [new TsconfigPathsPlugin()];
     config.resolve.alias = {
-      '@hooks': path.resolve(__dirname, 'hooks'),
-      '@components': path.resolve(__dirname, 'components'),
-      '@utils': path.resolve(__dirname, 'utils'),
-      '@pages': path.resolve(__dirname, 'pages'),
+      '@hooks': path.resolve(__dirname, '../', 'hooks'),
+      '@components': path.resolve(__dirname, '../', 'components'),
+      '@utils': path.resolve(__dirname, '../', 'utils'),
+      '@pages': path.resolve(__dirname, '../', 'pages'),
     };
     return config;
   },
