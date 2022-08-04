@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "storybook": "start-storybook -p 6006"
+    "storybook": "start-storybook --no-open -p 6006",
+    "build-storybook": "rm -rf storybook-static && build-storybook",
+    "deploy-storybook" : "gh-pages -d storybook-static"
   },
   "author": "",
   "license": "ISC",
@@ -27,9 +29,11 @@
     "@storybook/testing-library": "^0.0.13",
     "@types/node": "^18.6.1",
     "@types/webpack-bundle-analyzer": "^4.4.1",
+    "@typescript-eslint/parser": "^5.31.0",
     "eslint": "8.16.0",
     "eslint-config-next": "12.1.6",
     "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-jsx-a11y": "^6.6.1",
     "eslint-plugin-prettier": "^4.0.0",
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-storybook": "^0.5.12",
