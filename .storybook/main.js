@@ -5,7 +5,9 @@ module.exports = {
   stories: ['../storybooks/*.stories.@(ts|tsx)'],
   addons: ['@storybook/addon-links', '@storybook/addon-essentials'],
   webpackFinal: async (config) => {
-    config.resolve.plugins = [new TsconfigPathsPlugin({ extensions: config.resolve.extensions })];
+    config.resolve.plugins = [
+      new TsconfigPathsPlugin({ configFile: path.resolve(__dirname, '../tsconfig.json') }),
+    ];
     config.resolve.extensions.push('.ts', '.tsx');
     config.resolve.alias = {
       '@hooks': path.resolve(__dirname, '../', 'hooks'),
