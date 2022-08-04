@@ -4,7 +4,7 @@ on:
     branches:
       - main
 jobs:
-  update:
+  deploy:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@master
@@ -18,7 +18,7 @@ jobs:
           path: node_modules
           key: ${{runner.OS}}-build-${{hashFiles('**/package-lock.json')}}
           restore-keys: |
-            ${{ runner.OS }}-build-${{ runner.OS }}-
+            ${{ runner.OS }}-build-${{runner.OS }}-
       - name: Install dependencies
         run: npm i
 
